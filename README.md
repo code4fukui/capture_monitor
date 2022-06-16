@@ -2,6 +2,10 @@
 
 show "capture" device in your desktop with Electron.
 
+## demo app
+
+https://code4fukui.github.io/capture_monitor/
+
 ## prepare
 
 - install the latest [Node.js](https://nodejs.org/ja/)
