@@ -1,6 +1,6 @@
 # capture monitor
 
-show "capture" device in your desktop with Electron.
+show "capture" device on the browser or your desktop with Electron.
 
 ## demo app
 
