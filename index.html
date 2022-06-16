@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>capture monitor</title>
+  </head>
+  <body>
+    <video id="videoele"></video>
+
+<script type="module">
+try {
+  const devices = await navigator.mediaDevices.enumerateDevices();
+  console.log(devices);
+  const device = devices.filter(d => d.kind == "videoinput" && d.label.toLowerCase().indexOf("capture"))[0];
+  console.log(device);
+  const cap = device.getCapabilities();
+  console.log(cap);
+  const deviceId = device.deviceId;
+
+  const video = {
+    deviceId,
+    width: { ideal: 1920 },
+    height: { ideal: 1200 },
+  };
+  const stream = await navigator.mediaDevices.getUserMedia({ video, audio: false });
+  videoele.srcObject = stream;
+  videoele.play();
+} catch (e) {
+  console.log(e);
+  alert("ERROR: カメラを起動できませんでした。カメラの使用を許可してください。");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "capture_monitor",
+  "version": "1.0.0",
+  "description": "capture monitor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager ."
+  },
+  "author": "megaya",
+  "devDependencies": {
+    "electron": "^19.0.4",
+    "electron-packager": "^15.5.1"
+  }
+}
